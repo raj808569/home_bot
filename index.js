@@ -57,13 +57,19 @@ intents.matches('help',[
 //Turnlight1on
 intents.matches('turnlight1on',[			
 	function(session){
+		pyshell.run('b.py',function(err){
+						if(err) throw err;
+					});
 		light1status="ON";
 		session.send("light1 turned on");
 }]);
 
 //Turnlight2on
-intents.matches('Turnlight2on',[			
+intents.matches('turnlight2on',[			
 	function(session){
+pyshell.run('d.py',function(err){
+						if(err) throw err;
+					});
 		light2status="ON";
 		session.send("light2 turned on");
 }]);
@@ -71,6 +77,9 @@ intents.matches('Turnlight2on',[
 //Fanon
 intents.matches('fanon',[			
 	function(session){
+pyshell.run('f.py',function(err){
+						if(err) throw err;
+					});
 		fanstatus="ON";
 		session.send("fan turned on");
 }]);
@@ -78,6 +87,9 @@ intents.matches('fanon',[
 //Turnlight1off
 intents.matches('turnlight1off',[			
 	function(session){
+pyshell.run('a.py',function(err){
+						if(err) throw err;
+					});
 		light1status="OFF";
 		session.send("light1 turned off");
 }]);
@@ -85,6 +97,9 @@ intents.matches('turnlight1off',[
 //Turnlight2off
 intents.matches('turnlight2off',[			
 	function(session){
+pyshell.run('c.py',function(err){
+						if(err) throw err;
+					});
 		light2status="OFF";
 		session.send("light2 turned off");
 }]);
@@ -92,6 +107,9 @@ intents.matches('turnlight2off',[
 //fanoff
 intents.matches('fanoff',[			
 	function(session){
+pyshell.run('e.py',function(err){
+						if(err) throw err;
+					});
 		fanstatus="OFF";
 		session.send("fan turned off");
 }]);
@@ -105,6 +123,12 @@ intents.matches('allstatus',[
 //Alllightson
 intents.matches('alllightson',[			
 	function(session){
+pyshell.run('b.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('d.py',function(err){
+						if(err) throw err;
+					});
 		light2status="ON";light1status="ON";
 		session.send("light1 and 2 turned on");
 }]);
@@ -112,6 +136,12 @@ intents.matches('alllightson',[
 //Alllightsoff
 intents.matches('alllightsoff',[			
 	function(session){
+pyshell.run('a.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('c.py',function(err){
+						if(err) throw err;
+					});
 		light2status="OFF";light1status="OFF";
 		session.send("light2 and 1 turned off");
 }]);
@@ -119,15 +149,31 @@ intents.matches('alllightsoff',[
 //Alldeviceson
 intents.matches('alldeviceson',[			
 	function(session){
+pyshell.run('b.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('d.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('f.py',function(err){
+						if(err) throw err;
+					});
 		light2status="ON";light1status="ON";fanstatus="ON";
 		session.send("all devices turned on");
 }]);
 
-//Alldeviceson
+//Alldevicesoff
 intents.matches('alldevicesoff',[			
 	function(session){
+pyshell.run('a.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('c.py',function(err){
+						if(err) throw err;
+					});
+pyshell.run('e.py',function(err){
+						if(err) throw err;
+					});
 		light2status="OFF";light1status="OFF";fanstatus="OFF";
 		session.send("all devices turned off");
 }]);
-
-
