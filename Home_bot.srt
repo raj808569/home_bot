@@ -1,0 +1,21 @@
+﻿9
+00:00:57,500 --> 00:01:05,000
+<i>Home_bot can simultaneously control
+ all devices</i>
+
+12
+00:01:43,500 --> 00:01:50,000
+<i>Home_bot can also provide the status
+ of all the devices connected</i>
+
+14
+00:02:11,500 --> 00:02:20,000
+<i>Home_bot is trained over LUIS and
+ it is running on Microsoft Bot Emulator</i>
+
+15
+00:02:25,500 --> 00:02:31,900
+<i>turning all devices off
+<-the_end-></i>
+
+
